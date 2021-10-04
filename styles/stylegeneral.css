@@ -1,0 +1,640 @@
+/************/
+
+/* algemeen */
+
+/************/
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/************************/
+
+/* kleuren uit document */
+
+/************************/
+
+:root {
+    --button-color: #231a58;
+    --button-color2: #ec80a6;
+    --left-button-shadow: #ec80a6;
+    --center-button-shadow: #231a58;
+    --brand-color1: #EDD646;
+    --brand-color2: #FCE1E0;
+    --brand-color3: #CEC0DE;
+    --tekst-color1: #231a58;
+    --tekst-color2: white;
+    --footer-color: #EA3827;
+    --nav-color-active: #f08c38;
+    --brand-font-style: 'Work Sans', sans-serif;
+    --input-background-color: white;
+    --input-color: black;
+    --input-placeholder-color: rgb(180, 180, 180);
+    --input-border-color: lightgrey;
+    --focus-border-color: #231a58;
+    --footer-button-color: #ffe3e3;
+    --hover-instagram-color: #ec80a6;
+}
+
+body {
+    font-family: var(--brand-font-style);
+    color: var(--tekst-color1);
+    font-weight: 400;
+    width: 100%;
+    min-width: 365px;
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+    justify-content: space-between;
+}
+
+main section {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+main section ul {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+section {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+h1 {
+    font-weight: 500;
+    padding-bottom: 10%;
+    /*De calc heb ik uit de css van de pagina gehaald*/
+    font-size: calc((2.8 - 1) * 1.2vh + 1rem);
+    letter-spacing: 0.05em;
+}
+
+h2 {
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 3%;
+    /*De calc heb ik uit de css van de pagina gehaald*/
+    font-size: calc((2.8 - 1) * 1.2vh + 1rem);
+    letter-spacing: 0.05em;
+}
+
+p {
+    line-height: 2;
+    font-weight: 300;
+    margin-top: 3%;
+}
+
+a {
+    transition: 0.2s;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+/******************/
+
+/* footer styling */
+
+/******************/
+
+footer {
+    background-color: var(--footer-color);
+    color: var(--tekst-color2);
+    font-weight: 300;
+}
+
+footer section {
+    display: flex;
+    flex-direction: column;
+}
+
+footer section:nth-of-type(1) p:first-of-type {
+    justify-content: flex-start;
+    text-align: left;
+    width: 60%;
+    line-height: 2em;
+}
+
+footer section:nth-of-type(1) address {
+    justify-content: flex-start;
+    text-align: left;
+    width: 50%;
+    line-height: 2em;
+}
+
+footer section:nth-of-type(1) p:nth-of-type(2), footer section:nth-of-type(1) p:nth-of-type(3), footer section:nth-of-type(1) a {
+    width: 80%;
+}
+
+footer section:nth-of-type(2) {
+    justify-content: center;
+    text-align: center;
+}
+
+footer section:nth-of-type(3) {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    text-align: right;
+}
+
+footer a {
+    color: var(--tekst-color2);
+    line-height: 3.5em;
+    text-underline-offset: .3em;
+}
+
+footer img:first-of-type {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+footer button, section:last-of-type button {
+    padding-top: 1.8em;
+    padding-bottom: 1.8em;
+    width: 10em;
+    position: relative;
+    left: calc(50% - 5em);
+}
+
+footer button {
+    background-color: var(--footer-button-color);
+    color: var(--tekst-color1);
+}
+
+footer section {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+footer h2 {
+    font-size: 1.6em;
+}
+
+footer input, section:last-of-type input {
+    margin-top: 2.8em;
+}
+
+/***********************/
+
+/* social links footer */
+
+/***********************/
+
+footer section:last-of-type {
+    padding-top: 0;
+    padding-bottom: 2%;
+}
+
+footer section:last-of-type img {
+    width: 90%;
+}
+
+footer section:last-of-type img:first-of-type {
+    width: 80%;
+}
+
+footer section:last-of-type ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-inline-start: 0;
+}
+
+footer section:last-of-type ul a img {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+footer section:last-of-type li {
+    padding: 3%;
+}
+
+/***********/
+
+/* buttons */
+
+/***********/
+
+/****************/
+
+/* left buttons */
+
+/****************/
+
+main a, main button {
+    background-color: var(--button-color);
+    color: var(--tekst-color2);
+}
+
+main a, main button, footer button {
+    align-items: center;
+    font-family: var(--brand-font-style);
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 1.5em;
+    border-radius: 2.5em 2.5em;
+    width: 10em;
+    max-width: 195px;
+    cursor: pointer;
+    transition: 0.1s;
+    box-shadow: 4px 7px var(--left-button-shadow);
+}
+
+/************************/
+
+/* gecentreerde buttons */
+
+/************************/
+
+main section:nth-of-type(2) a:nth-of-type(1), main a:nth-of-type(2), main section:nth-of-type(5) a, main button, footer button {
+    position: relative;
+    left: calc(50% - 5.75em);
+}
+
+/**********/
+
+/* states */
+
+/**********/
+
+main a:hover, button:hover {
+    opacity: 80%;
+}
+
+a:focus, button:focus, input:focus {
+    outline: solid 2px var(--focus-border-color);
+    outline-offset: .2em;
+}
+
+/* zorgt dat de focus alleen geactiveerd wordt bij het gebruiken van een toetsenbord */
+
+a:focus:not(:focus-visible), button:focus:not(:focus-visible), input:focus:not(:focus-visible) {
+    outline: none;
+}
+
+main a:active, main button:active {
+    box-shadow: 1px 3px var(--left-button-shadow);
+}
+
+footer button:active {
+    box-shadow: 1px 3px var(--center-button-shadow);
+}
+
+/******************/
+
+/* hamburger menu */
+
+/******************/
+
+/* gemaakt met behulp van : https://codepen.io/roos-hva/pen/dyRQgbm p.s origineel van Sanne 't Hooft kon alleen die link niet meer vinden */
+
+nav button:nth-of-type(1) {
+    position: relative;
+    left: 0;
+    width: 2em;
+    height: 3em;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    appearance: none;
+    border: none;
+    background-color: var(--brand-color2);
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav button:nth-of-type(1) span {
+    position: absolute;
+    width: 2em;
+    height: 2px;
+    background-color: var(--button-color);
+    transition: .5s
+}
+
+nav button:nth-of-type(1) span:first-of-type {
+    transform: translatey(-5px);
+}
+
+nav button:nth-of-type(1) span:last-of-type {
+    transform: translatey(5px);
+}
+
+body.menuOpen nav button:nth-of-type(1) span:first-of-type {
+    transform: translatey(0) rotate(45deg);
+    background-color: var(--nav-color-active);
+}
+
+body.menuOpen nav button:nth-of-type(1) span:last-of-type {
+    transform: translatey(0) rotate(-45deg);
+    background-color: var(--nav-color-active);
+}
+
+body.menuOpen a:first-of-type svg {
+    stroke: var(--nav-color-active);
+    fill: var(--nav-color-active);
+}
+
+body.menuOpen nav>ul:first-of-type {
+    position: fixed;
+    width: 100%;
+}
+
+body.menuOpen nav>ul:nth-of-type(2) {
+    transform: translateY(0%);
+    opacity: 100%;
+}
+
+body.menuOpen a:first-of-type p {
+    color: var(--nav-color-active);
+}
+
+body.menuOpen nav ul ul {
+    transform: translateY(0%);
+}
+
+/*****************************/
+
+/* hamburger menu uitgeklapt */
+
+/*****************************/
+
+nav ul:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--brand-color2);
+    color: var(--nav-color-active);
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+    padding: 4em 0 0;
+    list-style: none;
+    opacity: 0%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    opacity: 0%;
+    transition: .5s cubic-bezier(0.175, 0.885, 0.320, 1.01);
+    ;
+    z-index: 98;
+    padding-top: 30%;
+}
+
+nav ul:nth-of-type(2) li a:focus {
+    color: var( --tekst-color1);
+}
+
+nav ul:nth-of-type(2):focus-within, nav ul:nth-of-type(2) ul:focus-within {
+    transform: translateY(0%);
+    opacity: 100%;
+}
+
+nav ul:nth-of-type(2) li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul:nth-of-type(2) a {
+    display: flex;
+    justify-content: center;
+    /* position: relative;
+    top: 3em; */
+    font-size: 2rem;
+    padding: .25em 1em;
+    color: var(--nav-color);
+    text-decoration: none;
+}
+
+nav ul:nth-of-type(2) a {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* top: 3em; */
+    font-size: 2rem;
+    padding: .25em 1em;
+    color: var(--nav-color);
+    text-decoration: none;
+    outline: none;
+}
+
+nav ul:nth-of-type(2) li:nth-of-type(6) {
+    margin-bottom: 10%;
+}
+
+/*******************************/
+
+/* animatie lijntje onder link */
+
+/*******************************/
+
+/* bron: https://codepen.io/shooft/pen/yLOdLBg */
+
+nav>ul:nth-of-type(2)>li>a::before {
+    content: "";
+    background-color: currentcolor;
+    position: absolute;
+    left: calc(50% - 3em);
+    bottom: -.1em;
+    width: 6em;
+    height: .1em;
+    border-radius: .125em;
+    text-decoration-line: wavy;
+    transform: scalex(0);
+    transition: .3s;
+}
+
+ul:nth-of-type(2)>li>a:hover::before {
+    transform: scalex(1);
+}
+
+ul:nth-of-type(2)>li>a:focus::before {
+    transform: scalex(1);
+}
+
+nav ul:nth-of-type(3) {
+    background-color: var(--brand-color2);
+    color: var(--nav-color-active);
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+    padding: 4em 0 0;
+    list-style: none;
+    opacity: 0%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(5%);
+    opacity: 0%;
+    transition: .5s cubic-bezier(0.175, 0.885, 0.320, 1.01);
+    ;
+    z-index: 98;
+}
+
+nav ul:nth-of-type(3) li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul:nth-of-type(3) a {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 3em;
+    font-size: 2rem;
+    padding: .25em 1em;
+    color: var(--nav-color);
+    text-decoration: none;
+}
+
+/*********************/
+
+/* navbar hoofpagina */
+
+/*********************/
+
+/***************/
+
+/* winkelwagen */
+
+/***************/
+
+a:first-of-type svg, a:first-of-type p {
+    stroke: var(--button-color);
+    stroke-width: 1px;
+    height: 2.3em;
+    width: 2.3em;
+    transition: .3s;
+}
+
+a:first-of-type p {
+    font-family: var(--brand-font-style);
+    font-size: .6em;
+    position: absolute;
+    bottom: 2.6em;
+    left: 3.3em;
+}
+
+/************/
+
+/* algemeen */
+
+/************/
+
+nav>ul:first-of-type {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--brand-color2);
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-inline-start: 0.1;
+    padding-inline-end: 0.1;
+    list-style-type: none;
+    min-width: 365px;
+    z-index: 100;
+}
+
+nav ul:first-of-type li {
+    position: relative;
+    top: 2em;
+    margin-bottom: 5em;
+    width: auto;
+    max-width: 100%;
+}
+
+nav ul:first-of-type li:nth-of-type(1) a img {
+    max-width: 18vw;
+}
+
+nav ul:first-of-type li:nth-of-type(2) a img {
+    max-width: 110px;
+}
+
+nav ul:first-of-type li:nth-of-type(3) a img {
+    max-width: 18vw;
+    display: block;
+}
+
+nav ul ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: var(--brand-color2);
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-inline-start: 0.1;
+    padding-inline-end: 0.1;
+    list-style-type: none;
+    min-width: 365px;
+    z-index: 100;
+    transform: translateY(105%);
+    transition: 1s cubic-bezier(0.175, 0.885, 0.320, 1.01);
+    ;
+}
+
+header {
+    background-color: var(--brand-color2);
+}
+
+/*****************/
+
+/* input styling */
+
+/*****************/
+
+input {
+    padding: 1.9em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    color: var(--input-color);
+    background-color: var(--input-background-color);
+    border: solid 1px var(--input-border-color);
+    outline: none;
+    appearance: none;
+    transition: 0.2s;
+}
+
+input::placeholder {
+    color: var(--input-placeholder-color);
+    font-size: 1.3em;
+    font-style: var(--brand-font-style);
+    font-weight: 100;
+}
+
+input[type="search"] {
+    padding: 1em 1em 1em 3em;
+    background-repeat: no-repeat;
+    background-size: 2em auto;
+    background-position: .5em center;
+}
