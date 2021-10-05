@@ -1,0 +1,174 @@
+/************/
+
+/* algemeen */
+
+/************/
+
+h1 {
+    font-size: 1.6em;
+    padding-top: 5%;
+    padding-bottom: 0%;
+    background-color: var(--brand-color1);
+}
+
+main {
+    background-color: var(--brand-color1);
+    text-align: center;
+}
+
+main section:first-of-type {
+    text-align: left;
+}
+
+main section:last-of-type {
+    background-color: var(--brand-color2);
+}
+
+main section:last-of-type p {
+    font-weight: 500;
+}
+
+
+/**********/
+
+/* nav */
+
+/**********/
+
+nav>ul:first-of-type {
+    background-color: var(--brand-color1);
+}
+
+main nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    line-height: 0;
+
+    margin: 0;
+    padding-inline-start: 0;
+    padding-top: 2.5em;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+
+main nav ul li {
+    display: flex;
+    flex-wrap: wrap;
+    
+    padding-left: .5em;
+    margin-bottom: 1.5em;
+  
+}
+
+main nav ul li a{
+   color: var(--dark-text-color);
+   font-size: 1.1em;
+   font-weight: 500;
+  
+
+   text-underline-offset: .3em;
+}
+
+main nav ul li a:hover {
+    opacity: 50%;
+}
+
+main nav ul li a:active {
+    color: var(--nav-color-active);
+    opacity: 100%;
+}
+
+/********************/
+
+/* artikelen winkel */
+
+/********************/
+
+main section:nth-of-type(2) ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    width: 100%;
+    padding-inline-start: 0;
+    margin: 0;
+    list-style: none;
+}
+
+main section:nth-of-type(2) ul li img {
+    width: 100%;
+    transition: 0.05s;
+    margin-bottom: 1em;
+    margin-right: 5%;
+}
+
+main section:nth-of-type(2) h2 {
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 0%;
+}
+
+main section:nth-of-type(2) p {
+    font-size: .9em;
+    margin-top: 0%;
+    margin-bottom: 12%;
+}
+
+/*************************/
+
+/* inleiding shop pagina */
+
+/*************************/
+
+main section:first-of-type img {
+    height: 20%;
+}
+
+main section:first-of-type p {
+    margin-top: 10%;
+}
+
+/*************************/
+/* button (eigenlijk a)  */
+/*************************/
+
+main section:first-of-type a {
+    align-items: center;
+    font-family: var(--brand-font-style);
+    font-weight: 400;
+
+    text-align: center;
+    text-decoration: none;
+    border: none;
+
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 1.5em;
+    border-radius: 2.5em 2.5em;
+
+    width: 10em;
+    max-width: 195px;
+    cursor: pointer;
+    transition: 0.1s;
+
+    background-color: var(--accent-button-color);
+    color: var(--dark-text-color);
+    box-shadow: 4px 7px var(--accent-button-shadow);
+}
+
+main section:first-of-type a:active {
+    box-shadow: 1px 3px var(--accent-button-shadow);
+}
+
+/**********/
+/* states */
+/**********/
+
+main nav a:focus {
+    outline: solid 2px var(--focus-border-color);
+    outline-offset: 0.5em;
+}
+

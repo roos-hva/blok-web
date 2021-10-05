@@ -1,16 +1,49 @@
-/************************/
+/**********/
 
-/* gecentreerde buttons */
+/* navbar */
 
-/************************/
+/**********/
+
+nav>ul:first-of-type {
+    background-color: var(--brand-color2);
+}
+
+/***********/
+
+/* buttons */
+
+/***********/
 
 main section:nth-of-type(3) a, section:nth-of-type(5) a {
-    background-color: var(--button-color2);
+    background-color: var(--accent-button-color);
     color: var(--tekst-color1);
 }
 
-main section:nth-of-type(3) a, section:nth-of-type(5) a, footer button {
-    box-shadow: 4px 7px var(--center-button-shadow);
+main section:nth-of-type(3) a, section:nth-of-type(5) a {
+    box-shadow: 4px 7px var(--accent-button-shadow);
+}
+
+main a {
+    align-items: center;
+    font-family: var(--brand-font-style);
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 1.5em;
+    border-radius: 2.5em 2.5em;
+    width: 10em;
+    max-width: 195px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+main a {
+    background-color: var(--general-button-color);
+    color: var(--light-text-color);
+    box-shadow: 4px 7px var(--general-button-shadow);
 }
 
 /**********/
@@ -23,10 +56,6 @@ main a:hover, button:hover {
     opacity: 80%;
 }
 
-nav ul:last-of-type ul li a:focus {
-    outline: solid 2px var(--focus-border-color);
-    outline-offset: .2em;
-}
 
 /* zorgt dat de focus alleen geactiveerd wordt bij het gebruiken van een toetsenbord */
 
@@ -35,11 +64,11 @@ nav ul:last-of-type ul li a:focus:not(:focus-visible) {
 }
 
 main a:active, main button:active {
-    box-shadow: 1px 3px var(--left-button-shadow);
+    box-shadow: 1px 3px var(--general-button-shadow);
 }
 
 main section:nth-of-type(5) a:active, main section:nth-of-type(3) a:active {
-    box-shadow: 1px 3px var(--center-button-shadow);
+    box-shadow: 1px 3px var(--accent-button-shadow);
 }
 
 /* De achtergrond van de eerste section */
@@ -167,7 +196,7 @@ main section:nth-of-type(6) img {
 }
 
 main section:nth-of-type(6) img:hover {
-    border: dotted 8px var(--hover-instagram-color);
+    border: dotted 8px var(--dotted-border-color);
 }
 
 main section:nth-of-type(6) ul {
