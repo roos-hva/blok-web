@@ -44,9 +44,16 @@
                 </li>
 
 
-                <li>
-                    <a href="index.html"><img src="images/Pansy-01.png" alt="pansy logo"></a>
-                </li>
+                
+				<li>
+					<a href="index.html">
+						<!-- via deze uitleg gemaakt: https://flaviocopes.com/dark-mode-change-img-source/ -->
+						<picture>
+							<source srcset="images/pansypaars.png" media="(prefers-color-scheme: dark)">
+							<img src="images/Pansy-01.png" alt="pansy logo">
+						</picture>
+					</a>
+				</li>
 
                 <li>
                     <button>
@@ -117,7 +124,9 @@
         <section>
             <ul>
                 <li>
-                    <img src="images/ilovebeingwithyou.jpeg" alt="greeting card with text i love being with you">
+                    <a href="">
+                        <img src="images/ilovebeingwithyou.jpeg" alt="greeting card with text i love being with you">
+                    </a>
                     <h2>i love being with you</h2>
                     <p>€3.50</p>
                 </li>
@@ -331,7 +340,7 @@
 
     <footer>
         <section>
-            <img src="images/pansyfooter.png" alt="logo pansy">
+            <img src="images/pansypaars.png" alt="logo pansy">
             <address>
                 czaar peterstraat 104
                 1018 ps amsterdam

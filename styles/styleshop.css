@@ -8,11 +8,11 @@ h1 {
     font-size: 1.6em;
     padding-top: 5%;
     padding-bottom: 0%;
-    background-color: var(--brand-color1);
+    background-color: var(--secondary-brand-color);
 }
 
 main {
-    background-color: var(--brand-color1);
+    background-color: var(--secondary-brand-color);
     text-align: center;
 }
 
@@ -21,7 +21,7 @@ main section:first-of-type {
 }
 
 main section:last-of-type {
-    background-color: var(--brand-color2);
+    background-color: var(--general-brand-color);
 }
 
 main section:last-of-type p {
@@ -36,7 +36,7 @@ main section:last-of-type p {
 /**********/
 
 nav>ul:first-of-type {
-    background-color: var(--brand-color1);
+    background-color: var(--secondary-brand-color);
 }
 
 main nav ul {
@@ -71,10 +71,11 @@ main nav ul li a{
   
 
    text-underline-offset: .3em;
+   transition: .3s;
 }
 
 main nav ul li a:hover {
-    opacity: 50%;
+    color: var(--accent-text-color);
 }
 
 main nav ul li a:active {
@@ -103,7 +104,13 @@ main section:nth-of-type(2) ul li img {
     transition: 0.05s;
     margin-bottom: 1em;
     margin-right: 5%;
+    transition:.75s cubic-bezier(0.555, 0.255, 0.170, 1.430);
 }
+
+main section:nth-of-type(2) ul li img:hover {
+ transform: scale(1.04);
+}
+
 
 main section:nth-of-type(2) h2 {
     font-size: 1em;
@@ -115,6 +122,11 @@ main section:nth-of-type(2) p {
     font-size: .9em;
     margin-top: 0%;
     margin-bottom: 12%;
+}
+
+main section:nth-of-type(2) ul li a {
+    width: 100%;
+
 }
 
 /*************************/

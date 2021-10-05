@@ -5,7 +5,7 @@
 /**********/
 
 nav>ul:first-of-type {
-    background-color: var(--brand-color2);
+    background-color: var(--general-brand-color);
 }
 
 /***********/
@@ -16,7 +16,7 @@ nav>ul:first-of-type {
 
 main section:nth-of-type(3) a, section:nth-of-type(5) a {
     background-color: var(--accent-button-color);
-    color: var(--tekst-color1);
+    color: var(--dark-text-color);
 }
 
 main section:nth-of-type(3) a, section:nth-of-type(5) a {
@@ -74,7 +74,7 @@ main section:nth-of-type(5) a:active, main section:nth-of-type(3) a:active {
 /* De achtergrond van de eerste section */
 
 main section:nth-of-type(1) {
-    background-image: url("../images/achtergrondstartpagina.png");
+    background-image: var(--background-illustration);
     background-size: 300%;
     background-position: center top;
 }
@@ -92,16 +92,10 @@ main section:first-of-type img {
     background-image: none;
 }
 
-main section:first-of-type article {
-    background-color: var(--brand-color1);
-    padding: 20%;
-    position: relative;
-    left: 1em;
-    bottom: 6em;
-}
 
 main section:first-of-type article {
-    background-color: var(--brand-color1);
+    background-color: var(--textblock-start-background-color);
+    color: var(--textblock-start-text-color);
     padding: 20%;
     padding-bottom: 40%;
     position: relative;
@@ -113,6 +107,10 @@ main section:first-of-type article a {
     position: relative;
     top: 3em;
     margin: 0;
+
+    color: var(--textblok-start-button-text-color);
+    background-color: var(--textblok-start-button-color);
+
     padding-left: 20%;
     padding-right: 20%;
 }
@@ -130,15 +128,15 @@ main section:first-of-type article p {
 /********************/
 
 main section:nth-of-type(2) {
-    background-color: var(--brand-color3);
+    background-color: var(--third-brand-color);
 }
 
 main section:nth-of-type(3) {
-    background-color: var(--brand-color1);
+    background-color: var(--secondary-brand-color);
 }
 
 main section:nth-of-type(4) {
-    background-color: var(--brand-color2);
+    background-color: var(--general-brand-color);
 }
 
 main section:nth-of-type(4) img {
@@ -156,7 +154,7 @@ main section:nth-of-type(5) {
     background-color: var(--brand-color3);
     z-index: 100;
     text-align: center;
-    background-image: url(../images/getintouch.png);
+    background-image: var(--get-in-touch-background);
     background-size: 200%;
     background-repeat: no-repeat;
     background-position: top center;
@@ -168,7 +166,7 @@ main section:nth-of-type(5) h2 {
 }
 
 main section:nth-of-type(5) a {
-    margin-bottom: 50%;
+    margin-bottom: 35%;
 }
 
 main section:nth-of-type(5) img {
@@ -178,7 +176,7 @@ main section:nth-of-type(5) img {
 }
 
 main section:nth-of-type(6) {
-    background-color: var(--brand-color3);
+    background-color: var(--third-brand-color);
     text-align: center;
     padding-left: 2%;
     padding-right: 2%;
@@ -192,17 +190,18 @@ main section:nth-of-type(6) h2 {
 
 main section:nth-of-type(6) img {
     width: 80%;
-    transition: 0.05s;
+    transition:.75s cubic-bezier(0.555, 0.255, 0.170, 1.430);
+    border: dotted 8px var(--dotted-border-color);
 }
 
 main section:nth-of-type(6) img:hover {
-    border: dotted 8px var(--dotted-border-color);
+    transform: scale(1.05);
 }
 
 main section:nth-of-type(6) ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: .8em;
+    gap: 1.5em;
     width: 100%;
     padding-inline-start: 0;
     margin: 0;
@@ -210,7 +209,7 @@ main section:nth-of-type(6) ul {
 }
 
 main section:nth-of-type(7) {
-    background-color: var(--brand-color1);
+    background-color: var(--secondary-brand-color);
 }
 
 main section:last-of-type {
@@ -232,6 +231,10 @@ main section:last-of-type img:last-of-type {
     margin-left: calc(50% - 5em);
 }
 
+main section:nth-of-type(2) a:nth-of-type(1), main a:nth-of-type(2), main section:nth-of-type(5) a {
+    position: relative;
+    left: calc(50% - 5.75em);
+}
 /************************/
 
 /* animatie startpagina */

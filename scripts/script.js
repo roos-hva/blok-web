@@ -20,7 +20,15 @@ function closeMenu() {
 
 // forEach functie gemaakt met hulp van Rowin
 
-var knopGeluid = document.querySelectorAll("a");
+var linkGeluid = document.querySelectorAll("a");
+
+linkGeluid.forEach(function(elem) {
+  elem.addEventListener("click", function() {
+    var audio = new Audio('geluid/mixkit-pebbles-click-1128.mp3');
+    audio.play();  });
+});
+
+var knopGeluid = document.querySelectorAll("button");
 
 knopGeluid.forEach(function(elem) {
   elem.addEventListener("click", function() {

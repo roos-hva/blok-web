@@ -17,6 +17,13 @@
 
 :root {
     --brand-font-style: 'Work Sans', sans-serif;
+    --background-illustration: url("../images/achtergrondstartpagina.png");
+    --get-in-touch-background: url("../images/getintouch.png");
+
+    --textblock-start-background-color: #EDD646;
+    --textblock-start-text-color: #231a58;
+    --textblok-start-button-color: #231a58;
+    --textblok-start-button-text-color: white;
 
     --general-button-color: #231a58;
     --accent-button-color: #ec80a6;
@@ -25,26 +32,76 @@
     --accent-button-shadow: #231a58;
 
     --footer-button-color: #ffe3e3;
+    --footer-button-shadow: #231a58;
 
-    --brand-color1: #EDD646;
-    --brand-color2: #FCE1E0;
-    --brand-color3: #CEC0DE;
+    --general-brand-color: #FCE1E0;
+    --secondary-brand-color: #EDD646;
+    --third-brand-color: #CEC0DE;
 
     --dark-text-color: #231a58;
     --light-text-color: white;
+    --accent-text-color: #ec80a6;
 
     --footer-color: #EA3827;
+    --light-footer-color:white;
+    --dark-footer-color: #231a58;
+
     --nav-color-active: #f08c38;
 
     --input-background-color: white;
     --input-color: black;
-
     --input-placeholder-color: rgb(180, 180, 180);
     --input-border-color: lightgrey;
 
     --focus-border-color: #231a58;
-    
     --dotted-border-color: #ec80a6;
+}
+
+@media (prefers-color-scheme:dark) {
+    :root {
+        /* dark theme */
+        --brand-font-style: 'Work Sans', sans-serif;
+        --background-illustration: url("../images/achtergrondstartpaginadark.png");
+        --get-in-touch-background: url("../images/getintouchdark.png");
+
+        --textblock-start-background-color: #EDD646;
+        --textblock-start-text-color: #231a58;
+        --textblok-start-button-color: #231a58;
+        --textblok-start-button-text-color: white;
+
+        --general-button-color: #ffe3e3;
+        --accent-button-color: #ec80a6;
+
+        --general-button-shadow: #ec80a6;
+        --accent-button-shadow: #ffe3e3;
+
+        --footer-button-color: #ffe3e3;
+        --footer-button-shadow: #ec80a6;
+
+        --general-brand-color: #231a58;
+        --secondary-brand-color: #3c3179;
+        --third-brand-color: #3c2f88;
+
+        --dark-text-color: #ffffff;
+        --light-text-color: #231a58;
+        --accent-text-color: #ec80a6;
+
+        --footer-color: #2f246b;
+        --light-footer-color:white;
+        --dark-footer-color: #231a58;
+
+        --nav-color-active: #f08c38;
+
+        --input-background-color: white;
+        --input-color: black;
+        --input-placeholder-color: rgb(180, 180, 180);
+        --input-border-color: lightgrey;
+
+        --focus-border-color: #ffffff;
+        --dotted-border-color: #ec80a6;
+
+        --image-brightness: .90;
+    }
 }
 
 body {
@@ -60,6 +117,10 @@ main {
     flex-flow: column;
     text-align: left;
     justify-content: space-between;
+}
+
+main img {
+    filter:brightness(var(--image-brightness));
 }
 
 main section {
@@ -108,7 +169,7 @@ p {
 }
 
 a {
-    transition: 0.2s;
+    transition: .75s cubic-bezier(0.555, 0.255, 0.170, 1.430);
 }
 
 a:hover {
@@ -123,7 +184,7 @@ a:hover {
 
 footer {
     background-color: var(--footer-color);
-    color: var(--light-text-color);
+    color: var(--light-footer-color);
     font-weight: 300;
 }
 
@@ -162,17 +223,17 @@ footer section:nth-of-type(3) {
 }
 
 footer a {
-    color: var(--tekst-color2);
+    color: var(--light-footer-color);
     line-height: 3.5em;
     text-underline-offset: .3em;
 }
 
 footer a:hover {
-    color: var(--dark-text-color);
+    color: var(--dark-footer-color);
 }
 
 footer a:active {
-    color: var(--brand-color3);
+    color: var(--third-brand-color);
 }
 
 footer img:first-of-type {
@@ -190,7 +251,7 @@ footer button, section:last-of-type button {
 
 footer button {
     background-color: var(--footer-button-color);
-    color: var(--dark-text-color);
+    color: var(--dark-footer-color);
 }
 
 footer section {
@@ -244,10 +305,6 @@ footer section:last-of-type li {
     padding: 3%;
 }
 
-
-
-
-
 /***********/
 
 /* buttons */
@@ -268,26 +325,20 @@ main button {
 
 main button, footer button {
     align-items: center;
-    
     font-family: var(--brand-font-style);
     font-weight: 400;
     text-align: center;
     text-decoration: none;
-    
     border: none;
     margin-top: 2em;
     margin-bottom: 2em;
     padding: 1.5em;
     border-radius: 2.5em 2.5em;
-     
     width: 10em;
     max-width: 195px;
     cursor: pointer;
-    transition: 0.1s;
-    
+    transition: .75s cubic-bezier(0.555, 0.255, 0.170, 1.430);
 }
-
-
 
 /************************/
 
@@ -295,13 +346,13 @@ main button, footer button {
 
 /************************/
 
-main section:nth-of-type(2) a:nth-of-type(1), main a:nth-of-type(2), main section:nth-of-type(5) a, main button, footer button {
+main button, footer button {
     position: relative;
     left: calc(50% - 5.75em);
 }
 
 footer button {
-    box-shadow: 4px 7px var(--accent-button-shadow);
+    box-shadow: 4px 7px var(--footer-button-shadow);
 }
 
 /**********/
@@ -311,12 +362,17 @@ footer button {
 /**********/
 
 main a:hover, button:hover {
-    opacity: 80%;
+    transform: scale(1.03);
 }
 
 a:focus, button:focus, input:focus {
     outline: solid 2px var(--focus-border-color);
     outline-offset: .2em;
+}
+
+header nav a:first-of-type p {
+    color: var(--general-button-color);
+    ;
 }
 
 /* zorgt dat de focus alleen geactiveerd wordt bij het gebruiken van een toetsenbord */
@@ -397,7 +453,7 @@ body.menuOpen a:first-of-type svg {
 body.menuOpen header nav>ul:first-of-type {
     position: fixed;
     width: 100%;
-    background-color: var(--brand-color2);
+    background-color: var(--general-brand-color);
 }
 
 body.menuOpen nav>ul:nth-of-type(2) {
@@ -413,8 +469,6 @@ body.menuOpen nav ul ul {
     transform: translateY(0%);
 }
 
-
-
 /*****************************/
 
 /* hamburger menu uitgeklapt */
@@ -426,23 +480,19 @@ nav ul:nth-of-type(2) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    background-color: var(--brand-color2);
+    background-color: var(--general-brand-color);
     color: var(--nav-color-active);
     font-weight: 300;
     line-height: 1.5;
-
     margin: 0;
     padding: 4em 0 0;
     list-style: none;
     opacity: 0%;
-
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-
     transform: translateY(100%);
     opacity: 0%;
     transition: .5s cubic-bezier(0.175, 0.885, 0.320, 1.01);
@@ -457,7 +507,7 @@ nav ul:nth-of-type(2) li a:focus {
 header nav ul:nth-of-type(2):focus-within, header nav ul:nth-of-type(2) ul:focus-within {
     transform: translateY(0%);
     opacity: 100%;
-    background-color: var(--brand-color2);
+    background-color: var(--general-brand-color);
 }
 
 nav ul:nth-of-type(2) li {
@@ -468,7 +518,6 @@ nav ul:nth-of-type(2) li {
 nav ul:nth-of-type(2) a {
     display: flex;
     justify-content: center;
-
     font-size: 2rem;
     padding: .25em 1em;
     color: var(--nav-color);
@@ -479,7 +528,6 @@ nav ul:nth-of-type(2) a {
     display: flex;
     justify-content: center;
     position: relative;
-
     font-size: 2rem;
     padding: .25em 1em;
     color: var(--nav-color);
@@ -521,7 +569,7 @@ ul:nth-of-type(2)>li>a:focus::before {
 }
 
 nav ul:nth-of-type(3) {
-    background-color: var(--brand-color2);
+    background-color: var(--general-brand-color);
     color: var(--nav-color-active);
     font-weight: 300;
     line-height: 1.5;
@@ -631,7 +679,7 @@ nav ul ul {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background-color: var(--brand-color2);
+    background-color: var(--general-brand-color);
     padding-left: 8%;
     padding-right: 8%;
     padding-inline-start: 0.1;
@@ -644,7 +692,7 @@ nav ul ul {
 }
 
 header {
-    background-color: var(--brand-color2);
+    background-color: var(--general-brand-color);
 }
 
 /*****************/
