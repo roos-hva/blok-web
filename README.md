@@ -292,8 +292,11 @@ hier screenshot(s) van je eindresultaat
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. https://webdesign.tutsplus.com/tutorials/color-schemes-with-css-variables-and-javascript--cms-36989
+2. https://codepen.io/shooft/pen/jOMOroZ*/
+3. https://codepen.io/shooft/pen/yLOdLBg
+4. https://stackoverflow.com/questions/6805482/css3-transition-animation-on-load
+5. https://flaviocopes.com/dark-mode-change-img-source/
+
 
 </details>

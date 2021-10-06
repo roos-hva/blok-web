@@ -111,6 +111,9 @@
         --image-brightness: .90;
     }
 }
+/********************************************************************************************************************************/
+/* gemaakt met behulp van : https://webdesign.tutsplus.com/tutorials/color-schemes-with-css-variables-and-javascript--cms-36989 */
+/********************************************************************************************************************************/
 
 :root.blackwhite {
     --brand-font-style: 'Work Sans', sans-serif;
