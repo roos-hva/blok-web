@@ -331,7 +331,7 @@ Shop color remove:
 <details open>
 <summary>continu bijhouden terwijl je werkt</summary>
 
-Bronnen staan die ik heb gebruikt staan ook direct in de code:
+Bronnen die ik heb gebruikt staan ook direct in de code:
 
 1. https://webdesign.tutsplus.com/tutorials/color-schemes-with-css-variables-and-javascript--cms-36989
 2. https://codepen.io/shooft/pen/jOMOroZ*/
