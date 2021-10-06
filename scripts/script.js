@@ -36,8 +36,7 @@ knopGeluid.forEach(function(elem) {
     audio.play();  });
 });
 
-var blackWhiteKnop = document.querySelector("button:last-of-type")
-
+// Gemaakt met behulp van deze bron: https://webdesign.tutsplus.com/tutorials/color-schemes-with-css-variables-and-javascript--cms-36989
 
 const setTheme = theme => document.documentElement.className = theme;
 

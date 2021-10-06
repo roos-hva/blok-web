@@ -43,8 +43,8 @@ De startpagina: screenshot wil helaas niet goed werken.
 <img src="images/pansystartpaginareadme.png" width="375px" alt="startpagina">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-About me: screenshot wil helaas niet goed werken.
-<img src="images/aboutmereadme.png" width="375px" alt="aboutmepagina">
+shop: screenshot wil helaas niet goed werken.
+<img src="images/shopscreenshot.png" width="375px" alt="aboutmepagina">
  
 </details>
 
@@ -120,7 +120,7 @@ Merel:
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
-Ik had wat problemen met mijn css en hoe bepaalde elementen waren opgetseld. Daarom ben ik nu bezig met het opnieuw opstellen van mijn css en dat gaat to nu goed. Zo heb ik al een aantal dingen op kunne plassen zoals de navbar.
+Ik had wat problemen met mijn css en hoe bepaalde elementen waren opgetseld. Daarom ben ik nu bezig met het opnieuw opstellen van mijn css en dat gaat to nu goed. Zo heb ik al een aantal dingen op kunnen plassen zoals de navbar.
 
 ## Navbar
 
@@ -158,10 +158,7 @@ Julia:
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Width 100% was heel belangrijk bij wat elementen om ze op de goede plaats te krijgen dit weet ik voor de volgende keer om dit ook eerst eens uit te proberen.
 
 </details>
 
@@ -177,8 +174,9 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 ### Bevindingen
 - Dingen die niet te zien zijn zoals een uitklapbaar hamburgermenu worden ook voor gelezen.
 - Om een screenreader goed te begrijpen heb je soms langere omschrijvingen nodig dan een kleine korte omschrijving.
-- Ik moet een tag even veranderen naar het juiste semantische element omdat je hem nu niet kan bereiken met tab.
-- Nav bar opent nu automatisch als je tab gebruikt zo tabt hij niet door een onzichtbaar element dit werkt nu ook met de screen reader.
+- Ik moet een tag even veranderen naar het juiste semantische element omdat je hem nu niet kan bereiken met tab. Verder lukt het allemaal al vrij aardig met het toetsenbord.
+- Verder vond ik het nog moeilijk om me goed in te leven in mensen met spasmes omdat ik mijn arm niet naar beneden kon draaien om mijn website te bedienen. Ik denk dat zij wel vooral baat zullen hebben bij het goed kunnen navigeren via toetsenbord.
+- Ook kon ik door de brillen nog aardig kijken dus hier kon ik me ook nog niet zo goed inleven, ik denk dat dit misschien ook komt omdat ik mijn site natuurlijk al beter ken.
 
 #### Onzichtbaar hamburgermenu
 Toen ik begon met de screen reader test liep ik er tegenaan dat hij het hamburgermenu ook ging voorlezen ookal was hij op dat moment niet in het scherm. Dit heb ik kunnen oplossen met :focus-within de navbar opent nu automatisch, zo is de navbar ook in beeld als hij wordt gelezen en kan je er ook mee interacteren. Zo kan je nu ook makkelijk het hamburgermenu openen door te tabben en hoef je niet tussendoor op enter te drukken.
@@ -186,22 +184,20 @@ Toen ik begon met de screen reader test liep ik er tegenaan dat hij het hamburge
 <img src="images/focus-within.png" width="375px" alt="focus-within hamburgermenu">
 
 
-#### Titel tweede bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### Langere beschrijving. 
+Opzich kan je het met een screenreader al wel snappen, alleen is het wel leuker als je soms even wat meer context hebt zodat je hetzelfde meekrijgt als iemand die wel goed kan zien.
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Ik heb nu nog omschrijvingen die vrij to the point zijn:
 
-
-#### Titel volgende bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+<img src="images/korteomschrijving.jpg" width="375px" alt="omschrijvingen elementen">
 
 
-#### Titel nog een bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
+Ik zou dus nog wat korte verhaaltjes bij bepaalde elementen kunnen schrijven die een betere impressie geven van wat er op het scherm te zien is.
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+
+#### Niet zichtbaar via tab. 
+Ik heb nu nog dat als ik door mijn navigatie heen tab dat de shopping cart niet wordt meegepakt via de focus. Dit komt omdat het elemant nog niet semantisch is. Hier ga ik dus nog een a tag omheen zetten zodat hij wel wordt opgepakt.
+
 
 </details>
 
@@ -256,10 +252,9 @@ Merel:
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Op de onderdelen die ik wilde omdraaien stond al flex, ik moest dus alleen nog order gebruiken om het even om te draaien.
+- Ik moest wat andere semantische elementen gebruiken en mijn html structuur veranderen zodat de social media links niet meer zouden botsen met de rest van mijn navigatie.
+- Het focus link probleem in mijn footer was ook vrij snel opgelost door wat paddings en margins te veranderen. Ik moet ook gewoon sneller als ik een probleem heb mijn dev-tools erbij pakken daar kan ik het probleem vaak al vinden.
 
 </details>
 
@@ -269,11 +264,34 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ## Eindgesprek (week 5)
 
-<details>
+<details open>
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Dit ging goed:
+- Het maken van de verschillende thema's ging eigenlijk vrij gemakkelijk;
+- Ik heb tijdens dit vak veel nieuwe selectoren geleerd zoals nth-type() of first-of-type enz. Dit maakte het selecteren veel makkelijker. Als ik hier vorig jaar van af had geweten had dat mij veel tijd gescheelt.
+
+- Het gebruiken van display:grid vond ik ook erg fijn werken ik had zo de structuur van de shop-pagina ook vrij snel in elkaar gezet.
+
+Dit ging lastig:
+- Het maken van de navigatiebar en het hamburgermenu heeft me het meeste tijd gekost. Ik kwam elke keer gekke bugs tegen die dingen dan weer niet goed lieten werken. Het heeft me soms flink wat tijd gekost om er achter te komen wat het probleem nou precies veroorzaakte. Gelukkig kwam ik verder in het vak erachter hoe handig DevTools kan zijn. Ik heb er wel veel van geleerd en ook vooral hoe ik focus goed moet laten werken op elementen die dus niet altijd in beeld zijn hier ben ik erg blij mee. Een voorbeeldje hiervan is:
+
+
+<img src="images/focusnotvisible.png" width="375px" alt="focus not visible zonder toetsenbord">
+
+- Met wat hulp van Rowin heb ik een loop in mijn javascript gemaakt, ik begrijp het nu redelijk maar ik vind het nog wel een lastig onderdeel waar ik wel meer over zou willen leren.
+
+<img src="images/loop.png" width="375px" alt="javascript code loop">
+
+- Verder nog wat andere stukken code die ik via uitleg van sites heb gemaakt maar nog niet compleet begrijp zo als deze, hier zou ik ook nog meer over willen leren.
+
+<img src="images/changetheme.png" width="375px" alt="javascript code voor het veranderen van thema">
+
+
+
+
+
 
 ### Screenshot(s)
 
@@ -281,6 +299,29 @@ hier screenshot(s) van je eindresultaat
 
 </details>
 
+Startpagina light:
+
+<img src="images/startlight.png" width="375px" alt="startpagina theme light">
+
+Startpagina dark:
+
+<img src="images/startdark.png" width="375px" alt="startpagina theme dark">
+
+Startpagina color remove:
+
+<img src="images/startremovecolor.png" width="375px" alt="startpagina theme remove color">
+
+Shop light:
+
+<img src="images/shoplight.png" width="375px" alt="shop theme light">
+
+Shop dark:
+
+<img src="images/shopdark.png" width="375px" alt="shop theme dark">
+
+Shop color remove:
+
+<img src="images/shopremovecolor.png" width="375px" alt="shop theme remove color">
 
 
 
@@ -290,7 +331,7 @@ hier screenshot(s) van je eindresultaat
 <details open>
 <summary>continu bijhouden terwijl je werkt</summary>
 
-Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
+Bronnen staan die ik heb gebruikt staan ook direct in de code:
 
 1. https://webdesign.tutsplus.com/tutorials/color-schemes-with-css-variables-and-javascript--cms-36989
 2. https://codepen.io/shooft/pen/jOMOroZ*/
