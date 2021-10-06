@@ -36,3 +36,11 @@ knopGeluid.forEach(function(elem) {
     audio.play();  });
 });
 
+var blackWhiteKnop = document.querySelector("button:last-of-type")
+
+
+const setTheme = theme => document.documentElement.className = theme;
+
+
+
+

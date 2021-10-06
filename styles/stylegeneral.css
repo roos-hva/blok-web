@@ -45,6 +45,11 @@
     --footer-color: #EA3827;
     --light-footer-color:white;
     --dark-footer-color: #231a58;
+    --link-footer-color: #231a58;
+
+    --special-button-shadow: black;
+    --special-button-color: black;
+    --special-button-background: white;
 
     --nav-color-active: #f08c38;
 
@@ -55,6 +60,7 @@
 
     --focus-border-color: #231a58;
     --dotted-border-color: #ec80a6;
+
 }
 
 @media (prefers-color-scheme:dark) {
@@ -89,6 +95,8 @@
         --footer-color: #2f246b;
         --light-footer-color:white;
         --dark-footer-color: #231a58;
+        --special-button-shadow: black;
+        --link-footer-color: #231a58;
 
         --nav-color-active: #f08c38;
 
@@ -104,12 +112,66 @@
     }
 }
 
+:root.blackwhite {
+    --brand-font-style: 'Work Sans', sans-serif;
+    --background-illustration: url("../images/achtergrondstartpaginablackwhite.png");
+    --get-in-touch-background: url("../images/getintouchblackwhite.png");
+
+    --textblock-start-background-color: black;
+    --textblock-start-text-color: white;
+    --textblok-start-button-color: white;
+    --textblok-start-button-text-color: black;
+
+    --general-button-color: rgb(68, 68, 68);
+    --accent-button-color: rgb(128, 128, 128);
+
+    --general-button-shadow: #777777;
+    --accent-button-shadow: black;
+
+    --footer-button-color: rgb(128, 128, 128);
+    --footer-button-shadow: #ffffff;
+
+    --general-brand-color: white;
+    --secondary-brand-color: white;
+    --third-brand-color: white;
+
+    --dark-text-color: black;
+    --light-text-color: white;
+    --accent-text-color: #5e5e5e;
+
+    --footer-color: black;
+    --light-footer-color:white;
+    --dark-footer-color: black;
+    --link-footer-color: #969696;
+
+    --special-button-shadow: #777777;
+    --special-button-color: black;
+    --special-button-background: white;
+
+    --nav-color-active: black;
+
+    --input-background-color: white;
+    --input-color: black;
+    --input-placeholder-color: rgb(180, 180, 180);
+    --input-border-color: lightgrey;
+
+    --focus-border-color: rgb(255, 0, 0);
+    --dotted-border-color: black;
+
+    --image-grayscale: 90%
+
+}
+
 body {
     font-family: var(--brand-font-style);
     color: var(--dark-text-color);
     font-weight: 400;
     width: 100%;
     min-width: 365px;
+}
+
+header img, footer img {
+    filter: grayscale(var(--image-grayscale));
 }
 
 main {
@@ -121,6 +183,7 @@ main {
 
 main img {
     filter:brightness(var(--image-brightness));
+    filter: grayscale(var(--image-grayscale));
 }
 
 main section {
@@ -229,7 +292,7 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--dark-footer-color);
+    color: var(--link-footer-color);
 }
 
 footer a:active {
@@ -266,6 +329,22 @@ footer h2 {
 footer input, section:last-of-type input {
     margin-top: 2.8em;
 }
+
+footer section:nth-of-type(3) button {
+    background-color: var(--special-button-background);
+    box-shadow: 4px 7px var(--special-button-shadow);
+    color: var(--special-button-color);
+
+    margin-top: 5em;
+
+}
+
+footer section:nth-of-type(3) button:active {
+    box-shadow: 1px 3px var(--special-button-shadow);
+
+}
+
+
 
 /***********************/
 
@@ -539,6 +618,23 @@ nav ul:nth-of-type(2) li:nth-of-type(6) {
     margin-bottom: 10%;
 }
 
+nav ul ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: var(--general-brand-color);
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-inline-start: 0.1;
+    padding-inline-end: 0.1;
+    list-style-type: none;
+    min-width: 365px;
+    z-index: 100;
+    transform: translateY(105%);
+    transition: 1s cubic-bezier(0.175, 0.885, 0.320, 1.01);
+}
+
 /*******************************/
 
 /* animatie lijntje onder link */
@@ -633,11 +729,9 @@ a:first-of-type p {
     left: 3.3em;
 }
 
-/************/
-
-/* algemeen */
-
-/************/
+/******************/
+/* navbar styling */
+/******************/
 
 header nav>ul:first-of-type {
     position: relative;
@@ -674,23 +768,6 @@ nav ul:first-of-type li:nth-of-type(3) a img {
     display: block;
 }
 
-nav ul ul {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    background-color: var(--general-brand-color);
-    padding-left: 8%;
-    padding-right: 8%;
-    padding-inline-start: 0.1;
-    padding-inline-end: 0.1;
-    list-style-type: none;
-    min-width: 365px;
-    z-index: 100;
-    transform: translateY(105%);
-    transition: 1s cubic-bezier(0.175, 0.885, 0.320, 1.01);
-}
-
 header {
     background-color: var(--general-brand-color);
 }
@@ -720,9 +797,3 @@ input::placeholder {
     font-weight: 100;
 }
 
-input[type="search"] {
-    padding: 1em 1em 1em 3em;
-    background-repeat: no-repeat;
-    background-size: 2em auto;
-    background-position: .5em center;
-}
